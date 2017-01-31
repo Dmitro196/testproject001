@@ -1,0 +1,263 @@
+﻿<!doctype html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>test work</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		 <link rel="stylesheet" href="css/style.css">
+		 <script src="jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+		
+		<div id="content">
+		   <div id="menu">
+				<ul>
+					<li id="home"><a href="#"><p>Главная</p></a></li>
+					<li id="learning"><a href="#"><p>Обучение</p></a></li>
+					<li id="bonuse"><a href="#"><p>Бонусы</p></a></li>
+					<li id="challenges"><a href="#"><p>Вызовы</p></a></li>
+					<li id="activity"><a href="#"><p>Мои Активности</p></a></li>
+					<li id="live"><a href="#"><p>Живая лента</p></a></li>
+					<li id="network"><a href="#"><p>Сеть связей</p></a></li>
+					<li id="tasks"><a href="#"><p>Решение задач</p></a></li>
+					<li id="star"><a href="#"><p>Признание</p></a></li>
+					<li id="news"><a href="#"><p>Новосной центр</p></a></li>
+					<li id="guide"><a href="#"><p>Гид по платформе</p></a></li>
+				</ul>
+		   
+		   </div>
+		    <div id="chat">
+					<div id="rules">
+						<div id="close" onclick="CloseRules()">
+						</div>
+						<h3>Правила Пользования лентой</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+					<div id="questions">
+						<textarea id="FAQ" placeholder="Напишите свое сообщение или задате вопрос"></textarea>
+						<input type="button" id="sendButton" value="отправить">
+						<div id="fileload"><p>filename.png</p></div>
+					</div>
+					<div class="dividerline"></div>
+					<div id="selectblock">
+					<p id="forShow">Показывать:</p>
+						<select id="showSelect">
+							<option>Все Посты</option>
+							<option>по теме</option>
+						</select>
+						<p id="forSort">сортировать по:</p>
+						<select id="sortSelect">
+							<option>Дата</option>
+							<option>Рейтинг</option>
+						</select>
+						
+					</div>
+					<div id="messages">
+					
+					<!--Этот блок восоздадим через джейквери -->
+						<!--<div class="post">
+						<div class="userinformation">
+							<h2 class="username">Олег Суперменов</h2>
+							<div class="usericon">1</div>
+							<h3 class="userStatus">Начинающий Нетворкер</h3>
+						</div>
+						<div class="postdate">18 января 2016</div>	
+						<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor velit incididunt ut labore etem dolore magna aliqua.</p>	
+							<div class="LikeAndComments">
+								<div class="likes" onclick="Click()"><p></p></div>
+								<p>Мне нравиться</p>
+								<div class="answer" onclick="Click()"></div>
+								<p>ответить</p>
+							</div>
+							
+						</div>-->
+						<div class="post noTopBorder parent">
+							
+							<div class="userinformation">
+								<h2 class="username">Олег Суперменов</h2>
+								<div class="usericon">3</div>
+								<h3 class="userStatus">Бывалый Нетворкер</h3>
+							</div>
+							<div class="postdate">18 января 2016</div>	
+							<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla  sint occaecat cupidatat non proident...</p>	
+							<p class="showMessage">Показать полностью</p>
+							<div class="picture"></div>
+							<div class="LikeAndComments">
+								<div class="likes" onclick="LikeClick(this)"><p>5</p></div>
+								<p class="userlike">Мне нравиться</p>
+								<div class="answer" onclick="AnswerClick(this)"></div>
+								<p class="useranswer">7 ответов</p>
+							</div>
+							<div class=" response childelement">
+								<div class="post noTopBorder">
+									<div class="userinformation">
+									<h2 class="username">Олег Суперменов</h2>
+									<div class="usericon">2</div>
+									<h3 class="userStatus">Матерый Нетворкер</h3>
+								</div>
+								<div class="postdate">18 января 2016</div>	
+								<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor velit incididunt ut labore etem dolore magna aliqua.</p>	
+									<div class="LikeAndComments">
+										<div class="likes" onclick="Click()"><p></p></div>
+										<p>Мне нравиться</p>
+										<div class="answer" onclick="Click()"></div>
+										<p>ответить</p>
+									</div>
+									
+						</div>
+							</div>
+								<div class=" response lastchildelement">
+								<div class="post noTopBorder">
+									<div class="userinformation">
+									<h2 class="username">Олег Суперменов</h2>
+									<div class="usericon">2</div>
+									<h3 class="userStatus">Матерый Нетворкер</h3>
+								</div>
+								<div class="postdate">18 января 2016</div>	
+								<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor velit incididunt ut labore etem dolore magna aliqua.</p>	
+									<div class="LikeAndComments">
+										<div class="likes" onclick="Click()"><p></p></div>
+										<p>Мне нравиться</p>
+										<div class="answer" onclick="Click()"></div>
+										<p>ответить</p>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div id="newresponse">
+								
+								<button>Отправить</button>
+							<textarea id="newresponsetextarea"placeholder="Напишите свой Ответ"></textarea>
+							<div class="cleaner"></div>
+								<h4 class="show5Response" onclick="show5()">Показать еще 5 ответов</h4>
+							</div>
+							
+							
+						</div><!-- End Post -->
+				</div>
+					
+					
+			</div>
+			<div class="cleaner"></div>
+		</div>
+	   <script>
+	   //$("#close").css("background-color","red");
+	   function CloseRules()
+	   {
+	   $("#rules").css("height","0");
+	   
+	   }
+	   function Click()
+	   {
+	   alert("you click");
+	   }
+	   
+	   function CreatePost()/*метод для создания шблонного поста*/
+	   {
+	   
+	   $("#messages").append('<div class="post"><div class="userinformation"><h2 class="username">Олег Суперменов</h2><div class="usericon">1</div><h3 class="userStatus">Начинающий Нетворкер</h3></div><div class="postdate">18 января 2016</div><p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor velit incididunt ut labore etem dolore magna aliqua.</p><div class="LikeAndComments"><div class="likes" onclick="Click()"><p></p></div><p>Мне нравиться</p><div class="answer" onclick="Click()"></div>	<p>ответить</p></div></div>');
+}
+	   
+	   function ShowAll(n)
+	   {
+	  $("#showAll").remove();
+		for(var i=0;i<n; i++)
+		{
+		
+		CreatePost();
+		}
+	
+	   }
+	   function CreateShowAllbutton()
+	   {
+	   	/*для добавление кнопки после выведенных сообщений*/
+	  $("#messages").append('<p id="showAll" onclick="ShowAll(10)">Загрузить все сообщения</p>');
+	   
+	   }
+	   CreatePost();
+	   CreatePost();
+	  
+	   CreateShowAllbutton();
+	 
+	  $(".response").append('<div class="hline"></div>');
+	  $(".childelement").append('<div class="childline"></div>');
+	  $(".lastchildelement").append('<div class="lastchildline"></div>');
+	  $(".parent").append('<div class="parentline"></div>');
+		  
+		  
+		  
+		  
+		  
+	function show5()
+	{
+	
+	
+	$("#newresponse").remove();
+	$(".lastchildelement").addClass("childelement");
+	for(var i=0;i<4;i++)
+	{
+	$(".parent").append('	<div class=" response childelement"><div class="post noTopBorder">	<div class="userinformation"><h2 class="username">Олег Суперменов</h2><div class="usericon">2</div><h3 class="userStatus">Матерый Нетворкер</h3></div>	<div class="postdate">18 января 2016</div>	<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor velit incididunt ut labore etem dolore magna aliqua.</p><div class="LikeAndComments"><div class="likes" onclick="Click()"><p></p></div><p>Мне нравиться</p><div class="answer" onclick="Click()"></div><p>ответить</p></div>	</div></div>');
+	$(".response").append('<div class="hline"></div>');
+	$(".childelement").append('<div class="childline"></div>');
+	
+	}
+
+	$(".parent").append('	<div class=" response lastchildelement"><div class="post noTopBorder">	<div class="userinformation"><h2 class="username">Олег Суперменов</h2><div class="usericon">2</div><h3 class="userStatus">Матерый Нетворкер</h3></div>	<div class="postdate">18 января 2016</div>	<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor velit incididunt ut labore etem dolore magna aliqua.</p><div class="LikeAndComments"><div class="likes" onclick="Click()"><p></p></div><p>Мне нравиться</p><div class="answer" onclick="Click()"></div><p>ответить</p></div>	</div></div>');
+	$(".response").append('<div class="hline"></div>');
+	$(".lastchildelement").append('<div class="lastchildline"></div>');
+	
+	
+	
+	$(".parent").append('<div id="newresponse">	<button>Отправить</button><textarea id="newresponsetextarea"placeholder="Напишите свой Ответ"></textarea>	<div class="cleaner"></div><h4 class="show5Response" onclick="show5()">Показать еще 5 ответов</h4></div>');
+	}
+		  
+		  
+		  
+	function LikeClick(m)
+{
+var url1='url("file:///D:/web/forTest/images/likes.png")';
+var url2='url("file:///D:/web/forTest/images/likes1.png")';
+var url3=$(m).css("background-image");
+if(url3==url1)
+{
+$(m).css("background-image",url2);
+
+}
+else
+{$(m).css("background-image",url1);}
+//$(m).css("background-image","url(images/likes1.png)");
+
+}	
+		  
+	function LikeClick(m)
+{
+var url1='url("file:///D:/web/forTest/images/likes.png")';
+var url2='url("file:///D:/web/forTest/images/likes1.png")';
+var url3=$(m).css("background-image");
+if(url3==url1)
+{
+$(m).css("background-image",url2);
+
+}
+else
+{$(m).css("background-image",url1);}
+}		  
+		  function AnswerClick(m)
+{
+var url1='url("file:///D:/web/forTest/images/answer.png")';
+var url2='url("file:///D:/web/forTest/images/answer1.png")';
+var url3=$(m).css("background-image");
+if(url3==url1)
+{
+$(m).css("background-image",url2);
+
+}
+else
+{$(m).css("background-image",url1);}
+}		  
+	   </script>
+    </body>
+    </html>
